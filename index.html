@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora IMC</title>
+</head>
+<body>
+     
+    <label for="altura">altura</label>
+    <input type="number" onchange="calculito()" id="altura" fruta="frutilla">
+    <label for="peso">peso</label>
+    <input type="number" onchange="calculito()" id="peso">
+   
+    <p id="res"></p>
+    <img src="" alt="" id="fotito">
+    
+    <script type="text/javascript">
+        function calculito() {
+           var resu = parseFloat(peso.value)/(parseFloat(altura.value)*parseFloat(altura.value));
+            res.innerText = resu;
+            if (resu < 19){
+                fotito.src = "./img/flaco.png"                
+            }
+            
+            if (resu >19 && resu < 25){
+                fotito.src = "./img/normal.png"                
+            }
+            if (resu >25){
+                fotito.src = "./img/gordo.png"                
+            }
+arguments
+        }
+    </script>
+</body>
+</html>
